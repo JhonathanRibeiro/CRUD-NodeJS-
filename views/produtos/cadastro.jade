@@ -1,0 +1,33 @@
+extends ../default
+
+block content
+ 
+  include ../templates/nav
+  
+  div(class=['ui', 'container', 'grid', 'stackable'])
+    div(class=['ten', 'wide', 'column'])
+
+      h2(class=['ui', 'header', 'grey', 'dividing'])= 'Cadastrar Produto'
+
+      div(class='form-cadastrarProduto')
+        form(class=['ui', 'form'] action='http://localhost:3000/cadastrarproduto' method='post')
+          div(class=['ui', 'field'])
+            label(for='nome')= 'Nome do Produto'
+            input(type='text' name='nome' placeholder='Nome...')
+          div(class=['ui', 'two', 'fields'])
+            div(class=['ui', 'field'])
+              label(for='preco')= 'Preço'
+              input(type='text' name='preco' placeholder='Preço...') 
+            div(class=['ui', 'field'])
+               label(for='estoque')= 'QTDE em Estoque'
+               input(type='text' name='estoque' placeholder='Quantidade em estoque...')
+          button(class=['ui', 'button', 'basic', 'black'])= 'Cadastrar'
+          div(class=['ui', 'message', 'error'])
+      //- Cria um alert formatado com a mensagem de registro
+      if info != undefined
+        div(class=['ui', 'message', 'success'])
+          i(class=['close', 'icon'])
+          div(class='header')= 'Produto cadastrado'
+          p= info
+
+   script(src='/javascripts/validacao.js')

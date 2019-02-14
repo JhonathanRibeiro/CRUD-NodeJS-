@@ -1,0 +1,24 @@
+extends default
+
+block content
+ 
+  include templates/nav
+  
+  div(class=['ui', 'container', 'grid', 'stackable'])
+    div(class=['ten', 'wide', 'column'])
+
+       div(class=['ui', 'message'])
+        h1(class=['ui', 'header', 'black'])= 'CRUD com NodeJS, Semantic, ExpressJS e MySQL'
+        p=''
+         p= 'NodeJS ou simplesmente Node, é um interpretador de Javascript open source e roda em todos sistemas operacionais. Ele é focado em migrar o Javascript do client-side para o server-side. Seu objetivo é ajudar programadores na criação de aplicações de alta escalabilidade, com códigos capazes de manipular dezenas de milhares de conexões simultâneas, numa única máquina física. O Node.js é baseado no interpretador V8 JavaScript Engine (interpretador de JavaScript open source implementado pelo Google em C++ e utilizado pelo Chrome). Foi criado por Ryan Dahl em 2009, e seu desenvolvimento é mantido pela fundação Node.js em parceria com a Linux Foundation.'
+         p= 'O conteúdo acima foi extraído do Wikipédia, e é um overview sobre a linguagem.'
+         p= 'Esta aplicação utiliza o framework Express e o banco de dados MySQL.'
+         p= 'Express: É um framework para construção de aplicações web para Node.js. Ele simplifica o processo de criação do servidor que já está disponível no Node.'
+         p= 'MySQL: Banco de dados utilizado, onde é armazenado os valores da aplicação.'
+         p= 'CRUD: É um acrônimo para Create, Read, Update and Delete. É um conjunto de operações que temos para executar nos servidores (POST, GET, PUT e DELETE, respectivamente). Isto é o que cada operação faz:'
+         p= 'Criar (POST) - Insere um valor no BD'
+         p= 'Ler (GET) - Seleciona um ou mais valores para exibir'
+         p= 'Atualizar (PUT) - Altera um valor em BD'
+         p= 'Excluir (DELETE) - Remove um valor'
+        //-  div(class='header')= 'CRUD completo com NodeJS, Express e MySQL'
+        

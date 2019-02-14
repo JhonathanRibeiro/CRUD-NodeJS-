@@ -1,0 +1,28 @@
+extends ../default
+
+block content
+ 
+  include ../templates/nav
+  
+  div(class=['ui', 'container', 'grid', 'stackable'])
+    div(class=['ten', 'wide', 'column'])
+
+      h2(class=['ui', 'header', 'grey', 'dividing'])= 'Editar Produto'
+
+      div(class='form-cadastrarProduto')
+        form(class=['ui', 'form'] action='http://localhost:3000/editar' method='post')
+          div(class=['ui', 'field'])
+            label(for='nome')= 'Nome do Produto'
+            input(type='text' name='nome' placeholder='Nome...' value=produto[0].nome)
+          div(class=['ui', 'two', 'fields'])
+            div(class=['ui', 'field'])
+              label(for='preco')= 'Preço'
+              input(type='text' name='preco' placeholder='Preço...' value=produto[0].preco) 
+            div(class=['ui', 'field'])
+               label(for='estoque')= 'QTDE em Estoque'
+               input(type='text' name='estoque' placeholder='Quantidade em estoque...' value=produto[0].estoque)
+               input(type='hidden' name='id_produto' value=produto[0].id_produto)
+          button(class=['ui', 'button', 'basic', 'black'])= 'Editar'
+          div(class=['ui', 'message', 'error'])
+
+   script(src='/javascripts/validacao.js')
